@@ -1,0 +1,119 @@
+@font-face {
+    font-family: body;
+    src: url(VarelaRound-Regular.ttf);
+}
+
+body{
+    font-family: body;
+    color: #2d3748;
+    background-color: rgb(243 244 246);
+}
+
+.startbtn{
+    background-color: transparent;
+    border: none;
+    color: green;
+    padding: 0;
+}
+.pausbtn{
+    background-color: transparent;
+    border: none;
+    color: red;
+}
+.alert{
+    position: fixed;
+    top: 50px;
+    right: 50px;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    /*animation-name: fadeOut;*/
+    /*animation-duration: 8s;*/
+}
+
+/*@keyframes fadeOut {*/
+/*    from { opacity: 1; }*/
+/*    to { opacity: 0; }*/
+/*}*/
+
+.alert-success{
+    background-color: #399339;
+}
+.alert-error{
+    background-color: #ef4444;
+}
+.fail{
+    background-color: #ef4444;
+}
+.done{
+    background-color: #399339;
+}
+.inprogress{
+    background-color: #2563eb;
+}
+.notassigned{
+    background-color: orange;
+}
+a{
+    text-decoration: none;
+    color:inherit;
+}
+.iconStyle{
+    font-size: x-large;
+}
+.green{
+    color: #399339;
+}
+.red{
+    color: #ef4444;
+}
+.gold{
+    color: goldenrod;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+    font-size: x-large;
+    color: #8d8d8d;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: max-content;
+    background-color: #818181;
+    color: #fff;
+    text-align: left;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    top: 20px;
+    z-index: 2;
+    font-size: xx-small;
+    right: 3px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #DDD;
+}
+
+tr:hover {background-color: #D6EEEE;}
+
+.home-a-but{
+    background-color: #323232;
+    padding: 7px 27px;
+    color: white;
+    border-radius: 10px;
+    margin: auto 20px;
+}
