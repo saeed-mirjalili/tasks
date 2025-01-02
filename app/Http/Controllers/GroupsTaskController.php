@@ -25,18 +25,6 @@ class GroupsTaskController extends Controller
                 if (!is_null($request->group)){
                     $task = Task::findOrFail($request->task);
                     $task->groups()->attach($request->group);
-//                    if ($request->has('isSupervisor')){
-//                        $user = User::findOrFail($request->user);
-//                        if ($user->role == 'user') {
-//                            $user->role = 'supervisor';
-//                            $user->save();
-//                        }
-//                    }
-//                    if ($task->status == 'notassigned'){
-//                        $task->status = 'inprogress';
-//                        $task->save();
-//                    }
-
                     return redirect()->back()->with('success', 'the operation was successfully');
                 }else{
                     return redirect()->back()->with('error','please select a group');
@@ -58,11 +46,6 @@ class GroupsTaskController extends Controller
             if (Gate::allows('admin-access')  || (Gate::allows('supervisor-access', $request->task))){
                 $task = Task::findOrFail($request->task);
                 $task->groups()->detach($request->group);
-//                $user = User::findOrFail($request->user);
-//                if ($user->role == 'supervisor') {
-//                    $user->role = 'user';
-//                    $user->save();
-//                }
                 return redirect()->back()->with('success', 'the operation was successfully');
             }else{
                 return redirect()->back()->with('error','you dont have permision');

@@ -10,24 +10,6 @@ class HomeController extends Controller
 {
     public function index()
     {
-//        $user = Auth::user();
-//        $tasks = Task::with(['times', 'groups.users'])
-//            ->whereHas('groups.users', function ($query) use ($user) {
-//                $query->where('users.id', $user->id);
-//            })->get();
-//        $timesForCurrentUser=[];
-//        foreach ($tasks as $task) {
-//            if (Auth::check()) {
-//                $userTimes = $task->times()
-//                    ->where('user_id', Auth::id())
-//                    ->get();
-//                foreach ($userTimes as $time) {
-//                    $timesForCurrentUser[] = $time;
-//                }
-//            }
-//        }
-
-
         $user = Auth::user();
         $tasks = Task::with(['times', 'groups.users'])
             ->whereHas('groups.users', function ($query) use ($user) {
@@ -44,9 +26,6 @@ class HomeController extends Controller
                 }
             }
         }
-//        $lastTimeForTask = $timesForCurrentUser->lastWhere('task_id', $task->id);
-
-//dd($timesForCurrentUser);
         return view('dashboard', compact('tasks', 'timesForCurrentUser'));
     }
 }

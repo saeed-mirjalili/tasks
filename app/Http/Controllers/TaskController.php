@@ -79,6 +79,11 @@ class TaskController extends Controller
     {
         if (Gate::allows('admin-access')  || (Gate::allows('supervisor-access'))) {
             $task->update($request->validated());
+            if ($request->has('deadline')){
+                $task->update([
+                    'status' => 'inprogress',
+                ]);
+            }
             return redirect()->route('tasks.index')->with('success', 'Task updated successfully.');
         }
         return redirect()->back()->with('error', 'You do not have permission to access this page.');

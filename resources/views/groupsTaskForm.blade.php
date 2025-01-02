@@ -1,16 +1,3 @@
-{{--<!doctype html>--}}
-{{--<html lang="en">--}}
-{{--<head>--}}
-{{--    <meta charset="UTF-8">--}}
-{{--    <meta name="viewport"--}}
-{{--          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">--}}
-{{--    <meta http-equiv="X-UA-Compatible" content="ie=edge">--}}
-{{--    <title>Document</title>--}}
-{{--    <link href="/css/style.css" rel="stylesheet" />--}}
-{{--    <link href="/css/index.css" rel="stylesheet" />--}}
-{{--    <link href="/css/tree.css" rel="stylesheet" />--}}
-{{--</head>--}}
-{{--<body style="background-color: rgb(243 244 246);">--}}
 <x-app-layout>
         <link href="/css/style.css" rel="stylesheet" />
         <link href="/css/index.css" rel="stylesheet" />
@@ -67,7 +54,6 @@
             <x-primary-button class="ms-3">
                 {{ __('Remove') }}<span class="icon-log-out"></span>
             </x-primary-button>
-{{--            <button type="submit"><span class="icon-log-out"></span>remove</button>--}}
         </form>
     </div>
 </div>
@@ -118,8 +104,4 @@
     }, 4000);
 </script>
 
-    </x-app-layout>
-{{--</body>--}}
-{{--</html>--}}
-
-
+</x-app-layout>

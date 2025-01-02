@@ -69,29 +69,6 @@
                         done task:{{ $taskCounts[$group->id]['successful'] ?? 0 }}<span class="icon-thumbs-up"></span>
                         failed task:{{ $taskCounts[$group->id]['unsuccessful'] ??  0}}<span class="icon-thumbs-down"></span>
                     </div>
-                    <div>
-{{--                        <form action="{{route('tasks.update', $task->id) }}" method="post" onsubmit="return confirm('are you sure?');">--}}
-{{--                            @csrf--}}
-{{--                            @method('PUT')--}}
-{{--                            <input type="text" value="fail" name="status" hidden />--}}
-{{--                            <button type="submit">is it fail <span class="icon-new"></span></button>--}}
-{{--                        </form>--}}
-                    </div>
-                    <div>
-{{--                        <form action="{{route('tasks.destroy', $task->id) }}" method="post" onsubmit="return confirm('are you sure?');">--}}
-{{--                            @csrf--}}
-{{--                            @method('delete')--}}
-{{--                            <button type="submit">delete task <span class="icon-trash"></span></button>--}}
-{{--                        </form>--}}
-                    </div>
-                    <div>
-{{--                        <form action="{{route('tasks.update', $task->id) }}" method="post" onsubmit="return confirm('are you sure?');">--}}
-{{--                            @csrf--}}
-{{--                            @method('PUT')--}}
-{{--                            <input type="datetime-local" name="deadline">--}}
-{{--                            <button type="submit">take overtime <span class="icon-battery"></span></button>--}}
-{{--                        </form>--}}
-                    </div>
                 </div>
             </div>
         </div>

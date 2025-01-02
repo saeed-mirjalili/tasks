@@ -23,7 +23,7 @@ class GroupController extends Controller
                     return $task->status == 'done';
                 })->count(),
                 'unsuccessful' => $group->tasks->filter(function ($task) {
-                    return $task->status == 'fail'; // یا وضعیت دیگری که نشان‌دهنده ناموفق بودن است
+                    return $task->status == 'fail';
                 })->count(),
             ];
         }
@@ -48,7 +48,6 @@ class GroupController extends Controller
     {
         if (Gate::allows('admin-access')  || (Gate::allows('supervisor-access'))) {
             Group::create($request->validated());
-//            $task->users()->attach($request->user());
             return redirect()->route('groups.index')->with('success', 'the operation was successfully');
         }
         return redirect()->back()->with('error', 'You do not have permission to access this page.');

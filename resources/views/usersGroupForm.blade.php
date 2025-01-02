@@ -54,7 +54,6 @@
                 <x-primary-button class="ms-3">
                     {{ __('Remove') }}<span class="icon-log-out"></span>
                 </x-primary-button>
-                {{--            <button type="submit"><span class="icon-log-out"></span>remove</button>--}}
             </form>
         </div>
     </div>
@@ -110,7 +109,4 @@
     </script>
 
 </x-app-layout>
-{{--</body>--}}
-{{--</html>--}}
-
 
